@@ -1,0 +1,736 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #326752;
+  --deep-green: #275b47;
+  --ink: #28362f;
+  --muted: #78827c;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding-bottom: 96px;
+  background: #e9e9e9;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-shell {
+  width: min(878px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 22px #0001;
+}
+
+.utility-bar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 9px;
+}
+
+.utility-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  border-right: 1px solid #eee;
+}
+
+.utility-right {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #777;
+}
+
+.utility-right strong {
+  color: #999;
+  font-size: 21px;
+}
+
+.login-label {
+  padding: 8px 0 8px 10px;
+  border-left: 1px solid #ddd;
+  color: #222;
+}
+
+.main-header {
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 5px 10px #0002;
+}
+
+.wordmark {
+  flex: 0 0 205px;
+  color: #326752;
+  font-family: Georgia, serif;
+  font-size: 43px;
+  font-weight: 900;
+  letter-spacing: -4px;
+  transform: scaleX(1.08);
+}
+
+.wordmark span {
+  display: inline-block;
+  margin-left: 3px;
+  font: 10px Arial;
+  vertical-align: top;
+  letter-spacing: 0;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(9px, 1.5vw, 22px);
+  color: #222;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.main-nav span {
+  cursor: default;
+}
+
+.main-nav b {
+  color: #888;
+  font-size: 9px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+main {
+  padding: 20px 11px 18px;
+}
+
+.hero-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.25fr) minmax(175px, .72fr);
+  gap: 22px;
+  align-items: center;
+  min-height: 275px;
+}
+
+.escuta-banner {
+  position: relative;
+  min-height: 265px;
+  overflow: hidden;
+  display: flex;
+  background: linear-gradient(110deg, #c3e0ec 0%, #fcf5e9 57%, #ffc58d 100%);
+}
+
+.escuta-banner::before, .escuta-banner::after {
+  position: absolute;
+  content: "";
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #ffffff25;
+}
+
+.escuta-banner::before {
+  left: -95px;
+  bottom: -135px;
+}
+
+.escuta-banner::after {
+  right: -115px;
+  top: -160px;
+}
+
+.escuta-art {
+  position: relative;
+  flex: 0 0 44%;
+  min-height: 265px;
+}
+
+.sun {
+  position: absolute;
+  left: 27%;
+  top: 41%;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f49bc9;
+  box-shadow: 0 0 0 12px #f49bc933, 0 0 0 25px #f49bc922;
+}
+
+.person {
+  position: absolute;
+  bottom: 31px;
+  width: 61px;
+  height: 87px;
+  border-radius: 28px 28px 8px 8px;
+}
+
+.person::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 32px;
+  left: 14px;
+  top: -24px;
+  border-radius: 50%;
+  background: #d88555;
+}
+
+.person-one {
+  left: 18%;
+  background: linear-gradient(#425aa5 0 45%, #eaaa6b 46%);
+  transform: rotate(-7deg);
+}
+
+.person-two {
+  left: 55%;
+  background: linear-gradient(#e35e73 0 45%, #f3ca66 46%);
+  transform: rotate(6deg);
+}
+
+.plant {
+  position: absolute;
+  bottom: 20px;
+  left: 4%;
+  color: #5d9a67;
+  font-size: 38px;
+}
+
+.escuta-copy {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: 28px 18px 50px 0;
+  text-align: center;
+}
+
+.program-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8a9d8c;
+  text-align: left;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.people-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 65% 30%, #f33 0 20%, transparent 22%), radial-gradient(circle at 35% 60%, #15984c 0 42%, transparent 44%);
+  color: transparent;
+}
+
+.program-title strong {
+  color: #73c52d;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.escuta-copy > small {
+  display: block;
+  margin-top: 4px;
+  color: #cf554c;
+  font-size: 7px;
+  text-align: left;
+}
+
+.escuta-copy p {
+  margin: 12px 0 8px;
+  color: #dd6553;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.green-cta {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #00a425;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.phone-lines {
+  position: absolute;
+  right: -6px;
+  bottom: 0;
+  left: -33px;
+  padding: 9px 5px;
+  border-radius: 30px 0 0 0;
+  background: #fffffff0;
+  color: #333;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.directory-card {
+  position: relative;
+  padding: 41px 12px 18px;
+  background: #f3f3f3;
+  text-align: center;
+}
+
+.phone-icon {
+  position: absolute;
+  top: -24px;
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: white;
+  color: #333;
+  font-size: 19px;
+}
+
+.directory-card h2 {
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.fake-field {
+  margin: 0 0 18px;
+  padding: 9px 10px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #999;
+  font-size: 10px;
+  text-align: left;
+}
+
+.directory-button {
+  display: block;
+  padding: 9px;
+  border-radius: 2px;
+  background: var(--green);
+  color: white;
+  font-size: 10px;
+}
+
+.ai-policy-banner {
+  min-height: 118px;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: linear-gradient(110deg, #310044, #4d0068);
+  color: white;
+  text-align: center;
+}
+
+.ai-policy-banner h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.static-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.static-buttons span, .static-green-button {
+  display: inline-block;
+  padding: 9px 11px;
+  border-radius: 2px;
+  background: #55b666;
+  color: white;
+  font-size: 9px;
+}
+
+.static-buttons span + span {
+  background: #43bfd3;
+}
+
+.integrity-banner {
+  min-height: 120px;
+  margin-top: 15px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(90deg, #89857b, #41664b), repeating-linear-gradient(135deg, transparent 0 12px, #ffffff12 12px 16px);
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+}
+
+.integrity-banner h2 {
+  margin: 0 0 22px;
+  font-size: 28px;
+}
+
+.policies-row {
+  min-height: 114px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green);
+  color: white;
+}
+
+.policies-row > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  padding: 16px;
+  text-align: center;
+}
+
+.policies-row > div + div {
+  border-left: 1px solid #ffffffaa;
+}
+
+.policies-row h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.about-section {
+  min-height: 125px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 28px 22px;
+  background: #fafafa;
+}
+
+.about-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: white;
+  color: #42584c;
+  font-size: 21px;
+}
+
+.about-section h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.about-section p {
+  margin: 0;
+  color: #778078;
+  font-size: 11px;
+}
+
+.about-note {
+  margin-left: auto;
+  color: #929a94;
+  font-size: 10px;
+}
+
+.ask-bar {
+  position: fixed;
+  z-index: 30;
+  bottom: 0;
+  left: 50%;
+  width: min(878px, 100%);
+  min-height: 76px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border: 1px solid #e3e6e3;
+  border-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  background: #fffffff5;
+  box-shadow: 0 -5px 22px #0002;
+  backdrop-filter: blur(8px);
+}
+
+.ask-sparkle {
+  color: var(--green);
+  font-size: 23px;
+}
+
+.ask-bar input {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d7ded9;
+  border-radius: 8px;
+  outline: none;
+  font-size: 13px;
+}
+
+.ask-bar input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px #32675218;
+}
+
+.ask-bar button {
+  height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--green);
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.ask-bar button span {
+  margin-left: 7px;
+}
+
+.chat-panel {
+  position: fixed;
+  z-index: 40;
+  left: 50%;
+  bottom: 0;
+  width: min(878px, calc(100vw - 24px));
+  height: min(75vh, 720px);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #d8dfda;
+  border-radius: 14px 14px 0 0;
+  background: white;
+  box-shadow: 0 -6px 24px #0002;
+}
+
+.chat-panel.is-hidden {
+  display: none;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 15px;
+  background: var(--green);
+  color: white;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff25;
+  font-size: 19px;
+}
+
+.chat-title div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.chat-title strong {
+  font-size: 13px;
+}
+
+.chat-title small {
+  color: #e3eee7;
+  font-size: 10px;
+}
+
+.chat-header button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffff25;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  overflow-y: auto;
+  padding: 13px;
+  background: #f7f8f7;
+}
+
+.assistant-message, .message {
+  max-width: 90%;
+  padding: 10px 12px;
+  border-radius: 11px;
+  background: white;
+  color: #344239;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #e4f0e7;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #e6eae7;
+}
+
+.chat-input-row input {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #d7ded9;
+  border-radius: 22px;
+  outline: none;
+  font-size: 12px;
+}
+
+.chat-input-row button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .main-header {
+    min-height: 66px;
+  }
+  .wordmark {
+    flex-basis: auto;
+    font-size: 36px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+    color: #333;
+    font-size: 20px;
+  }
+  .hero-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .directory-card {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .escuta-banner {
+    min-height: 240px;
+  }
+  .escuta-art {
+    min-height: 240px;
+  }
+  .escuta-copy {
+    padding-top: 22px;
+  }
+  .program-title strong {
+    font-size: 26px;
+  }
+  .escuta-copy p {
+    font-size: 13px;
+  }
+  .green-cta {
+    padding: 10px 14px;
+    font-size: 10px;
+  }
+  .phone-lines {
+    left: -50%;
+    font-size: 9px;
+  }
+  .ai-policy-banner h1, .integrity-banner h2 {
+    font-size: 22px;
+  }
+  .policies-row h2 {
+    font-size: 12px;
+  }
+  .about-note {
+    display: none;
+  }
+  .ask-bar {
+    min-height: 68px;
+    padding: 10px;
+    gap: 8px;
+  }
+  .ask-bar input {
+    height: 42px;
+    font-size: 12px;
+  }
+  .ask-bar button {
+    padding: 0 11px;
+  }
+  .chat-panel {
+    left: 50%;
+    bottom: 0;
+    width: calc(100vw - 20px);
+    height: min(80vh, 720px);
+    transform: translateX(-50%);
+  }
+}
+
+.restore-chat {
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--green);
+  border-radius: 7px;
+  background: white;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.restore-chat.is-hidden {
+  display: none;
+}
+
+
+.ask-bar.is-hidden {
+  display: none;
+}
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intranet Cocari — Protótipo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <div class="utility-bar">
+      <span class="utility-left">PERGUNTAS FREQUENTES</span>
+      <div class="utility-right"><span>Seja Bem Vindo!</span><strong>Intranet</strong><span class="login-label">LOGIN</span></div>
+    </div>
+
+    <header class="main-header">
+      <div class="wordmark" aria-label="Cocari">cocari<span>®</span></div>
+      <nav class="main-nav" aria-label="Navegação ilustrativa">
+        <span>GERAL <b>⌄</b></span>
+        <span>EXPOCOCARI <b>⌄</b></span>
+        <span>SERVIÇOS <b>⌄</b></span>
+        <span>PORTAL DE SOLICITAÇÕES <b>⌄</b></span>
+        <span>SISTEMAS <b>⌄</b></span>
+        <span>NF-e</span>
+        <span>SIC MOBILE</span>
+      </nav>
+      <div class="mobile-menu">☰</div>
+    </header>
+
+    <main>
+      <section class="hero-row">
+        <div class="escuta-banner">
+          <div class="escuta-art" aria-hidden="true"><div class="sun"></div><div class="person person-one"></div><div class="person person-two"></div><div class="plant">✿</div></div>
+          <div class="escuta-copy">
+            <div class="program-title"><span class="people-mark">●</span><span>PROGRAMA<br><strong>ESCUTA</strong></span></div>
+            <small>CUIDAR DE VOCÊ É NOSSA PRIORIDADE.</small>
+            <p>O Programa Escuta está disponível<br>para quando você precisar</p>
+            <span class="green-cta">ATENDIMENTO:<br>PRESENCIAL OU ONLINE</span>
+            <div class="phone-lines">WhatsApp: (44) 99759-1223<br>Ambulatório Médico: (44) 3233-8870&nbsp; | &nbsp;Ramal 9731</div>
+          </div>
+        </div>
+
+        <aside class="directory-card">
+          <div class="phone-icon">☎</div>
+          <h2>Ramais e Telefones</h2>
+          <div class="fake-field">Nome ou Ramal</div>
+          <div class="fake-field">Entreposto</div>
+          <span class="directory-button">PESQUISAR</span>
+        </aside>
+      </section>
+
+      <section class="ai-policy-banner">
+        <h1>Política de Uso de IA</h1>
+        <div class="static-buttons"><span>CLIQUE PARA VISUALIZAR - Formato de Livro</span><span>CLIQUE PARA BAIXAR EM PDF</span></div>
+      </section>
+
+      <section class="integrity-banner">
+        <div><h2>Programa de Integridade</h2><span class="static-green-button">CLIQUE PARA CONHECER</span></div>
+      </section>
+
+      <section class="policies-row">
+        <div><h2>LEI GERAL DE PROTEÇÃO DE DADOS</h2><span class="static-green-button">CLIQUE PARA CONHECER</span></div>
+        <div><h2>POLÍTICA DE SEGURANÇA DA INFORMAÇÃO</h2><span class="static-green-button">CLIQUE PARA CONHECER</span></div>
+      </section>
+
+      <section class="about-section">
+        <div class="about-icon">⚙</div>
+        <div><h2>Sobre a Intranet</h2><p>Central de informações e serviços para os colaboradores Cocari.</p></div>
+        <span class="about-note">Protótipo demonstrativo</span>
+      </section>
+    </main>
+  </div>
+
+  <form id="perguntaInicialForm" class="ask-bar">
+    <span class="ask-sparkle">✳</span>
+    <input id="perguntaInicial" type="text" placeholder="Escreva sua dúvida sobre o SIC..." autocomplete="off" required>
+    <button type="submit">Enviar <span>➤</span></button>
+    <button id="restaurarChat" class="restore-chat is-hidden" type="button">Voltar ao chat</button>
+  </form>
+
+  <section id="chatPainel" class="chat-panel is-hidden" aria-label="Chat do Assistente IA" aria-hidden="true">
+    <header class="chat-header">
+      <div class="chat-title"><span class="chat-mark">✳</span><div><strong>Assistente IA</strong><small>Cocari · Dúvidas sobre o SIC</small></div></div>
+      <button id="minimizarChat" type="button" aria-label="Minimizar chat">−</button>
+    </header>
+    <div id="conversa" class="chat-messages" aria-live="polite">
+      <div class="assistant-message">Olá! Sou o Assistente IA da Cocari. Envie sua dúvida sobre o SIC.</div>
+    </div>
+    <form id="formularioMensagem" class="chat-input-row">
+      <input id="mensagem" type="text" placeholder="Digite sua dúvida..." autocomplete="off" required>
+      <button type="submit" aria-label="Enviar mensagem">➤</button>
+    </form>
+  </section>
+
+  <script src="base-conhecimento.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
